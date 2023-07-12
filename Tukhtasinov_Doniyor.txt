@@ -1,0 +1,157 @@
+              P14 Doniyorbek Tukhtasinov
+             1)
+             class Solution:
+                   def targetIndices(self, nums: List[int], target: int) -> List[int]:
+                        nums.sort()
+                        res = []
+                        print(nums)
+                        for i in range(len(nums)):
+                            if nums[i] == target:
+                                res.append(i)
+                        return res
+
+             2)
+             class Solution:
+                  def average(self, salary: List[int]) -> float:
+                       salary.remove(max(salary))
+                       salary.remove(min(salary))
+                       return sum(salary)/len(salary)
+
+             3)
+             import threading
+             import httpx
+             from multiprocessing import Process
+
+            def save_ing(path):
+                responce = httpx.get(path)
+                data = responce.content
+                with open(path[len(path)-18:], 'wb') as f:
+                    f.write(data)
+                    f.close()
+
+
+            if __name__ == '__main__':
+                list_img = [
+                    'https://directline.digital/media/page_photos/0000/photo_1.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_2.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_3.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_4.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_5.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_6.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_7.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_8.normal.png'
+                ]
+                arr = []
+                for i in range(len(list_img)):
+                    p = threading.Thread(save_ing(list_img[i],))
+                    p.start()
+                    arr.append(p)
+                for i in arr:
+                    i.join()
+
+            4)
+            import os
+
+            dir = "p14"
+            files = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+            if not os.path.exists(dir):
+                os.makedirs(dir)
+            for file in files:
+                with open(os.path.join(dir, file), "w") as f:
+                    f.write(f"print('Hello {file}')")
+                print('Save text!')
+            5)
+            import smtplib
+            from email.message import EmailMessage
+            import pandas
+            email_address = "doniyorbek068@gmail.com"
+            email_password = "meevjguobhkxcqmb"
+
+
+            msg = EmailMessage()
+            msg['Subject'] = "Queston 5"
+            msg['From'] = email_address
+            msg['To'] = "Adilshod3234@gmail.com"
+            msg.set_content("""              P14 Doniyorbek Tukhtasinov
+             1)
+             class Solution:
+                   def targetIndices(self, nums: List[int], target: int) -> List[int]:
+                        nums.sort()
+                        res = []
+                        print(nums)
+                        for i in range(len(nums)):
+                            if nums[i] == target:
+                                res.append(i)
+                        return res
+
+             2)
+             class Solution:
+                  def average(self, salary: List[int]) -> float:
+                       salary.remove(max(salary))
+                       salary.remove(min(salary))
+                       return sum(salary)/len(salary)
+
+             3)
+             import threading
+             import httpx
+             from multiprocessing import Process
+
+            def save_ing(path):
+                responce = httpx.get(path)
+                data = responce.content
+                with open(path[len(path)-18:], 'wb') as f:
+                    f.write(data)
+                    f.close()
+
+
+            if __name__ == '__main__':
+                list_img = [
+                    'https://directline.digital/media/page_photos/0000/photo_1.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_2.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_3.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_4.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_5.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_6.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_7.normal.png',
+                    'https://directline.digital/media/page_photos/0000/photo_8.normal.png'
+                ]
+                arr = []
+                for i in range(len(list_img)):
+                    p = threading.Thread(save_ing(list_img[i],))
+                    p.start()
+                    arr.append(p)
+                for i in arr:
+                    i.join()
+
+            4)
+            import os
+
+            dir = "p14"
+            files = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+            if not os.path.exists(dir):
+                os.makedirs(dir)
+            for file in files:
+                with open(os.path.join(dir, file), "w") as f:
+                    f.write(f"print('Hello {file}')")
+                print('Save text!')
+            5)
+            import smtplib
+            from email.message import EmailMessage
+            import pandas
+            email_address = "doniyorbek068@gmail.com"
+            email_password = "meevjguobhkxcqmb"
+
+
+            msg = EmailMessage()
+            msg['Subject'] = "Queston 5"
+            msg['From'] = email_address
+            msg['To'] = "Adilshod3234@gmail.com"
+            msg.set_content("")
+
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                smtp.login(email_address, email_password)
+                smtp.send_message(msg)""")
+
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+                smtp.login(email_address, email_password)
+                smtp.send_message(msg)

@@ -1,0 +1,105 @@
+# 1)
+# 168
+# https://leetcode.com/problems/excel-sheet-column-title/
+# columnNumber = 701
+# res = []
+# while columnNumber > 0:
+#     columnNumber -= 1
+#     l = columnNumber % 26
+#     res += chr(l + ord('A'))
+#     columnNumber //= 26
+# print(''.join(res[::-1]))
+
+
+
+
+
+
+# 2)
+# 2089
+# https://leetcode.com/problems/find-target-indices-after-sorting-array/
+#
+# nums = [1,2,5,2,3]
+# target = 3
+#
+# sort = sorted(nums)
+# l = []
+#
+# for i, j in enumerate(sort):
+#     if j == target:
+#         l.append(i)
+# print(l)
+
+
+# 3)
+import requests
+# url = [
+#     'https://media.istockphoto.com/id/1011598436/photo/android-female-soldier-military-cyborg-woman-armed-with-rifle-sitting-on-white-background-sci.jpg?s=2048x2048&w=is&k=20&c=yL8IoEQFHQyCtTX7k91-Jy9wRLpq2bByNnLtbXKXLSo=',
+#     'https://media.istockphoto.com/id/1278639909/photo/future-technology-in-black-prosthetic-hand-on-white-3ds-max-render-futuristic-innovation.jpg?s=2048x2048&w=is&k=20&c=-EZ8hfqMzTYLgZDocIKRRwnrPAo1H1zTyoJpSQMuwYU=',
+#     'https://media.istockphoto.com/id/1040315976/photo/woman-looking-at-view-from-a-cave-of-matera-basilicata-italy.jpg?s=2048x2048&w=is&k=20&c=uPllK3G_RlTANNpXtpLjtxZuZlHl88qcaiDVr--wUlo=',
+#     'https://media.istockphoto.com/id/1351304992/photo/3d-illustration-female-robot-on-white.jpg?s=612x612&w=0&k=20&c=2bhyHKGxffIwWuNufo6cz69neQcwVdVPkFts9FkL4RU='
+#     ]
+
+
+
+
+
+
+# 4)
+# import os
+#
+# name_papka = "p14"
+# file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+#
+# if not os.path.exists(name_papka):
+#     os.makedirs(name_papka)
+#
+# for file_name in file_names:
+#     with open(os.path.join(name_papka, file_name), "w") as f:
+#         f.write(f"print('Hello {name_papka}')")
+#         # f.write(f"Hello {name_papka}")
+#
+# for file_name in file_names:
+#     print(f"{file_name} yozildi.")
+#
+
+
+
+# 5)
+# import smtplib
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+# from email.mime.base import MIMEBase
+# from email import encoders
+#
+#
+# sender_email = "turgunovjamshid32@gmail.com"
+# recipient_email = "Adilshod3234@gmail.com"
+# subject = "Code File Attachment"
+# body = "Please find attached the code file."
+# code_file_path = "exam.txt"
+# message = MIMEMultipart()
+# message["From"] = sender_email
+# message["To"] = recipient_email
+# message["Subject"] = subject
+# message.attach(MIMEText(body, "plain"))
+# with open('exam.txt', "rb") as file:
+#     attachment = MIMEBase("application", "octet-stream")
+#     attachment.set_payload(file.read())
+#     encoders.encode_base64(attachment)
+#     attachment.add_header(
+#         "Content-Disposition",
+#         f"attachment; filename= {code_file_path.split('/')[-1]}",
+#     )
+#     message.attach(attachment)
+#
+# smtp_host = "smtp.gmail.com"
+# smtp_port = 587
+# smtp_username = "turgunovjamshid32@gmail.com"
+# smtp_password = "ndqtqyzvzkmzpixr"
+#
+# with smtplib.SMTP(smtp_host, smtp_port) as server:
+#     server.starttls()
+#     server.login(smtp_username, smtp_password)
+#     server.send_message(message)
+#     print("Email sent successfully!")

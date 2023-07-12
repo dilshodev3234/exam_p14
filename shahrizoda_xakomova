@@ -1,0 +1,207 @@
+											
+											
+												1-misol
+
+												
+SELECT sell_date, COUNT(DISTINCT product) AS num_sold, GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',') AS products
+FROM Activities
+GROUP BY sell_date
+ORDER BY sell_date;
+
+												
+												
+												2-misol
+												
+												
+									
+												
+def averageSalary(salary):
+    # Sort the salary array in ascending order
+    salary.sort()
+    
+    # Calculate the sum of all salaries excluding the minimum and maximum
+    total_sum = sum(salary[1:-1])
+    
+    # Calculate the average by dividing the sum by the number of salaries minus 2
+    average = total_sum / (len(salary) - 2)
+    
+    return average
+
+
+salary1 = [4000, 3000, 1000, 2000]
+print(averageSalary(salary1))  # Output: 2500.0
+
+salary2 = [1000, 2000, 3000]
+print(averageSalary(salary2))  # Output: 2000.0
+												
+												
+												
+												3-misol
+												
+												
+import requests
+import os
+from multiprocessing import Pool
+
+def download_image(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        filename = url.split('/')[-1]  # Extract the filename from the URL
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+            print(f"Downloaded {filename}")
+
+if __name__ == '__main__':
+    image_urls = [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.jpg',
+        'https://example.com/image3.jpg',
+        # Add more image URLs here
+    ]
+    
+    # Create a pool of worker processes
+    pool = Pool()
+    
+    # Download the images using multiprocessing
+    pool.map(download_image, image_urls)
+    
+    pool.close()
+    pool.join()
+
+    # Move the downloaded images to the desired directory
+    destination_directory = 'images'
+    os.makedirs(destination_directory, exist_ok=True)
+    for filename in os.listdir('.'):
+        if filename.endswith('.jpg'):
+            os.rename(filename, os.path.join(destination_directory, filename))
+												
+
+												
+												
+												4-misol
+												
+import requests
+import os
+from concurrent.futures import ThreadPoolExecutor
+
+def download_image(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        filename = url.split('/')[-1]  # Extract the filename from the URL
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+            print(f"Downloaded {filename}")
+
+if __name__ == '__main__':
+    image_urls = [
+        'https://example.com/image1.jpg',
+        'https://example.com/image2.jpg',
+        'https://example.com/image3.jpg',
+        # Add more image URLs here
+    ]
+    
+    # Create a thread pool executor with a specified number of worker threads
+    max_workers = 5  # Number of worker threads
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Download the images using multithreading
+        executor.map(download_image, image_urls)
+    
+    # Move the downloaded images to the desired directory
+    destination_directory = 'images'
+    os.makedirs(destination_directory, exist_ok=True)
+    for filename in os.listdir('.'):
+        if filename.endswith('.jpg'):
+            os.rename(filename, os.path.join(destination_directory, filename))
+	
+												
+												
+												5-misol
+												
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+# Sender and recipient email addresses
+sender_email = "your_email@gmail.com"  # Replace with your Gmail address
+recipient_email = "Adilshod3234@gmail.com"
+
+# Email subject and body
+subject = "Code File Attachment"
+body = "Please find attached the code file."
+
+# Path to the code file to be attached
+code_file_path = "p14/test1.py"  # Replace with the actual path to your code file
+
+# Create a multipart message object
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = recipient_email
+message["Subject"] = subject
+
+# Add the email body
+message.attach(MIMEText(body, "plain"))
+
+# Open the code file and attach it to the email
+with open(code_file_path, "rb") as file:
+    attachment = MIMEBase("application", "octet-stream")
+    attachment.set_payload(file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {code_file_path.split('/')[-1]}",
+    )
+    message.attach(attachment)
+
+# Gmail SMTP configuration
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "your_email@gmail.com"  # Replace with your Gmail address
+smtp_password = "your_password"  # Replace with your Gmail password
+
+# Create an SMTP connection
+with smtplib.SMTP(smtp_host, smtp_port) as server:
+    # Start TLS encryption
+    server.starttls()
+    # Login to the Gmail account
+    server.login(smtp_username, smtp_password)
+    # Send the email
+    server.send_message(message)
+    print("Email sent successfully!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+												

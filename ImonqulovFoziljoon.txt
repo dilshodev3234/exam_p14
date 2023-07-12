@@ -1,0 +1,136 @@
+                    Imonqulov Foziljon P14 Group
+
+
+
+    Foziljon Imonqulov
+    1-savol
+    alphabet = 'zxcvbnmlkjhgfdsaqwertyuiop'
+            a = ['']
+            for i in alphabet:
+                if i in s and i.upper() in s:
+                    a.append(i.upper())
+            a.sort()
+            return a[-1]
+
+
+    2-savol https://leetcode.com/problems/find-target-indices-after-sorting-array/
+            num1 = sorted(nums)
+            l = []
+            for i in range(len(num1)):
+                if num1[i]==target:
+                    l.append(i)
+            return l
+
+    # 3-savol
+    import os
+    import requests
+    import multiprocessing
+
+    image_addres = [
+        'https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg',
+        'https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg',
+        'https://tinyjpg.com/images/social/website.jpg',
+        'https://onlinejpgtools.com/images/examples-onlinejpgtools/sunflower.jpg',
+        'https://images.unsplash.com/photo-1601902572612-3c850fab3ad8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8anBnfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1569974507005-6dc61f97fb5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8anBnfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1639241423587-a9802ac301bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGpwZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1618417873527-eaf3a1d25c23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGpwZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1640681858035-5e62f72d90a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGpwZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1644915343220-0bb9a1d7bc36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGpwZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'
+    ]
+
+    if not 'images' in os.listdir():
+        os.mkdir('images')
+
+    files = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg',
+        'image4.jpg',
+        'image5.jpg',
+        'image6.jpg',
+        'image7.jpg',
+        'image8.jpg',
+        'image9.jpg',
+        'image10.jpg',
+    ]
+
+
+    def save_image(path, data):
+        with open(f"{'images'}/{path}", 'wb') as f:
+            f.write(data)
+
+
+    l = []
+    for i in range(len(image_addres)):
+        a = requests.get(image_addres[i])
+        data = a.content
+        save_image(files[i], data)
+        m = multiprocessing.Process(target=save_image, args=(files[i], data))
+        m.start()
+        l.append(m)
+    for i in l:
+        i.join()
+
+
+    4-savol
+
+    import os
+    if not 'p14' in list:
+        os.mkdir('p14')
+
+
+    files = [
+        'test1.py',
+        'test2.py',
+        'test3.py',
+        'test4.py',
+        'test5.py',
+    ]
+
+    def write_hello(file_name):
+        with open(f"{'p14'}/{file_name}", 'w') as f:
+            s = f"print('hello {file_name}')"
+            f.write(s)
+
+
+    for i in files:
+        write_hello(i)
+
+
+    5-savol
+
+    import smtplib
+    from email.message import EmailMessage
+    import threading
+
+    email_address = "imonqulovf1234@gmail.com"
+    email_password = "nejhmwoznpasapmk"
+
+
+    def send_mail(mail):
+        msg = EmailMessage()
+        msg['Subject'] = "Exam Imonqulov Foziljon"
+        msg['From'] = email_address
+        msg['To'] = mail
+        with open('Imonqulov_Foziljon.txt', 'r') as f:
+            a = f.read()
+        msg.set_content(a)
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(email_address, email_password)
+            smtp.send_message(msg)
+
+
+    to_user = ['imonqulovf1234@gmail.com']
+    a = "Adilshod3234@gmail.com"
+
+    l = []
+    for i in to_user:
+        t = threading.Thread(target=send_mail, args=(i,))
+        t.start()
+        l.append(t)
+
+    for i in l:
+        i.join()
+

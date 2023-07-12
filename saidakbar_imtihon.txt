@@ -1,0 +1,92 @@
+1 - masala -- https://leetcode.com/problems/find-target-indices-after-sorting-array/
+		class Solution:
+		    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+			arr = []
+			nums.sort()
+			for i in nums:
+			    if i == target:
+				arr.append(nums.index(i))
+				nums[nums.index(i)] = 111111111111
+			return arr
+
+
+
+
+2 - masala -- https://leetcode.com/problems/most-common-word/
+		class Solution:
+		    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+			    words = []
+			    word = ''
+			    paragraph += ' '
+			    for i in paragraph:
+				if i.isalpha():
+				    word += i.lower()
+				else:
+				    if word:
+				        words.append(word)
+				        word = ''
+
+			    frequency = {}
+
+			    for word in words:
+				if word in frequency:
+				    frequency[word] += 1
+				else:
+				    frequency[word] = 1
+
+			    for word in banned:
+				if word in frequency:
+				    del frequency[word]
+
+			    most_common_word = max(frequency, key=frequency.get)
+
+			    return most_common_word
+
+
+3 - masala
+	import threading
+	import httpx
+	link = ["https://directline.digital/media/page_photos/0000/photo_14.normal.png",
+		"https://www.hopetutors.com/wp-content/uploads/2019/06/Python-Training-in-Chennai-1.jpg",
+		"https://office-guru.ru/wp-content/uploads/2021/06/Snimok-ekrana-2018-11-05-v-16.44.45.png",
+		"https://img3.akspic.ru/attachments/originals/6/4/3/3/6/163346-piton-programmirovanie_na_python-logo-tekst-simvol-3840x2160.png",
+		"https://avatars.mds.yandex.net/i?id=46d8c2f3ff48a6dec7d0cdeee31a3b921ae01749-8960812-images-thumbs&n=13",
+		"https://i.pinimg.com/originals/a9/ac/a2/a9aca2f4501163a0820d59e0236d2bc8.png",
+		"https://i.pinimg.com/originals/a9/ac/a2/a9aca2f4501163a0820d59e0236d2bc8.png",
+		"https://w7.pngwing.com/pngs/441/911/png-transparent-learning-to-program-using-python-programming-language-computer-programming-the-python-papers-anthology-computer-text-computer-logo.png",
+		"https://www.wikitechy.com/technology/wp-content/uploads/2020/03/python-operator-overloading-scaled.jpg",
+		"https://avatars.mds.yandex.net/i?id=46d8c2f3ff48a6dec7d0cdeee31a3b921ae01749-8960812-images-thumbs&n=13"]
+	arr = ["img1.png", "img2.png","img3.png","img4.png","img5.png","img6.png","img7.png","img8.png","img9.png","img10.png"]
+	def write_image(file, link):
+		response = httpx.get(link)
+		d = response.content
+		with open(file, "wb") as f:
+		    f.write(d)
+
+	l = []
+	for i in range(len(arr)):
+	    t = threading.Thread(target=write_image, args=(arr[i], link[i]))
+	    t.start()
+	    l.append(t)
+	for i in l:
+	    i.join()
+
+
+5 - masala
+	import smtplib
+	from email.message import EmailMessage
+	email_address = "saidakbaruraimov7@gmail.com"
+	email_password = "ybxfgtkoxfumwxgr"
+	msg = EmailMessage()
+	msg['Subject'] = "Email subject"
+	msg['From'] = "saidakbaruraimov7@gmail.com"
+	msg['To'] = "Adilshod3234@gmail.com"
+	msg.set_content("")
+
+
+	with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+	    smtp.login(email_address, email_password)
+	    smtp.send_message(msg)
+	    print("send mail !")
+
+

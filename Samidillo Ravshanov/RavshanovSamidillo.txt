@@ -1,0 +1,181 @@
+Samidillo Ravshanov:
+    1) https://leetcode.com/problems/find-target-indices-after-sorting-array/
+    nums = sorted(nums)
+            a = []
+            for i in range(len(nums)):
+                if nums[i] == target:
+                    a.append(i)
+            return a
+
+    2)
+    import sqlite3
+
+    con = sqlite3.connect("scheme.sqlite")
+
+    cur = con.cursor()
+
+    Genres_table = """create table if not exists Genres_table(
+        GenreID integer primary key autoincrement,
+        GenreName vaMovieActor_table
+    )"""
+
+    MovieGenres_table = """create table if not exists MovieGenres(
+        MovieID integer primary key autoincrement,
+        GenreID integer
+    )"""
+
+    MovieActor_table = """create table if not exists MovieActor(
+        MovieID integer,
+        ActorID integer primary key autoincrement
+    )"""
+
+    Movies_table = """create table if not exists Movies(
+        MovieID integer,
+        DirectorID integer,
+        GenreID integer,
+        Title varchar(255),
+        ReleaseYear integer,
+        Rating integer,
+        Plot varchar(255),
+        MovieLength integer
+    )"""
+
+
+    Actors_table = """create table if not exists Actors(
+        ActorID integer,
+        FirstName varchar(255),
+        LastName varchar(255),
+        Nationaly varchar(255),
+        Birth integer
+    )"""
+
+    Directors_table = """create table if not exists Directors(
+        DirectorID integer primary key autoincrement,
+        Firstname varchar(255),
+        LastName varchar(255),
+        Nationaly varchar(255),
+        Birth integer
+    )"""
+
+    cur.execute(Genres_table)
+    cur.execute(MovieGenres_table)
+    cur.execute(MovieActor_table)
+    cur.execute(Movies_table)
+    cur.execute(Actors_table)
+    cur.execute(Directors_table)
+    con.commit()
+
+    3)
+    import httpx
+    import multiprocessing
+    import os
+
+    urls = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs0JFlTy5a0SAyP2Jr4hfe6Arlq1320G2I5Q&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FiLmNTm6nNnmq4fyKM4xrGEcR_tr0Qa-AQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAq2ZVYhLCCiYVYmci0MVv9pAweUiQQxnbENHUOoklJlK7XLQp1YNM0mqQne6o9C8hcUQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROg4js3byDT_rQ9FlphnR-QZilWwB5hJ9eoQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRsr1F5SmG5tKOl18zdreOb7VVPjKmPjBrtg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPTQ5fthHqxXMT0SX7-Qntr_qhmqjJeuGoA&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9T0gGglGfIAovCNFb0N6SQO1Zl9cI8UUaqg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwMFZCcDQVTWwpiR1SWCGPNxkwKRIN-TdgQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReLOM8Wy9q3tjEfHQHcdZ4FapLeKCdANUc9A&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjQivX13__jNNoHYst6LUoYERzCQHwaekcvUXHgAvycquV-tz-ebTG_mvNtePr8p9DJbE&usqp=CAU"
+    ]
+
+    files = [
+        "img1.png",
+        "img2.png",
+        "img3.png",
+        "img4.png",
+        "img5.png",
+        "img6.png",
+        "img7.png",
+        "img8.png",
+        "img9.png",
+        "img10.png"
+    ]
+
+    paths = os.listdir()
+
+    if not "Photos" in paths:
+        os.mkdir("Photos")
+
+
+    def save_photo(data, path):
+        with open(f"Photos/{path}", "wb") as f:
+            f.write(data)
+
+    l = []
+
+    for i in range(len(urls)):
+        res = httpx.get(urls[i])
+        data = res.content
+        p = multiprocessing.Process(target=save_photo, args=(data,files[i]))
+        p.start()
+        l.append(p)
+
+    for i in l:
+        i.join()
+
+
+    4)
+    import os
+
+    files = [
+        "test1.py",
+        "test2.py",
+        "test3.py",
+        "test4.py",
+        "test5.py",
+    ]
+    paths = os.listdir()
+
+    if not "p14"  in paths:
+        os.mkdir("p14")
+
+    for i in range(len(files)):
+        with open(f"p14/{files[i]}", "w") as f:
+            f.write("".join(f'print("Hello, {files[i]}")'))
+
+
+    5)
+    import smtplib
+    from email.message import EmailMessage
+    import threading
+
+    # set your email and password
+    # please use App Password
+    email_address = "samidilloravshanov13@gmail.com"
+    email_password = "qgsnmcrgbxakcfif" # noqa
+
+
+    def send_mail(mail):
+        # create email
+        msg = EmailMessage()
+        msg['Subject'] = "Examination"
+        msg['From'] = email_address
+        msg['To'] = mail
+        with open("RavshanovSamidillo.txt", "r") as f:
+            msg.set_content(f"{f.read()}")
+
+        # send email
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(email_address, email_password)
+            smtp.send_message(msg)
+            print("Send mail")
+
+
+    to_user = [
+        "Adilshod3234@gmail.com"
+    ]
+
+
+    l = []
+    for i in to_user:
+        t = threading.Thread(target=send_mail, args=(i,))
+        t.start()
+        l.append(t)
+
+    for i in l:
+        i.join()

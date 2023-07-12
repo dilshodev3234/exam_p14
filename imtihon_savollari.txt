@@ -109,7 +109,7 @@ Diyorbek Dilmurodov
 
 Sur'atov
 
-    1)https://leetcode.com/problems/delete-duplicate-emails/?envType=study-plan-v2&id=top-sql-50
+    1)https://leetcode.com/problems/find-target-indices-after-sorting-array/
     2)https://leetcode.com/problems/can-place-flowers/
     3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)

@@ -1,0 +1,99 @@
+
+
+1) - javob
+
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        num = sorted(nums)
+        s=[]
+        for i in range(len(num)):
+            if num[i]== target:
+                s.append(i)
+        return s
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ 4) - javob
+
+
+import os
+
+fayillarSoni = 5
+
+dir = 'p14'
+os.makedirs(dir, exist_ok=True)
+
+for i in range(fayillarSoni):
+    nomi = f'test{i + 1}.py'
+    papka_nomi = os.path.join(dir, nomi)
+
+    with open(papka_nomi, 'w') as f:
+        f.write('print("Hello, world!")')
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2-javob
+
+
+
+class Solution:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        i = 0
+        while i < len(flowerbed) and n > 0:
+            if flowerbed[i] == 0 and (i == 0 or flowerbed[i-1] == 0)and (i == len(flowerbed)-1 or flowerbed[i+1] == 0):
+                flowerbed[i] = 1
+                n -= 1
+            i += 1
+        return n == 0
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+3-javob
+
+import httpx
+mas=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU"
+     ]
+
+for i in range(len(mas)):
+    responce = httpx.get(f'{mas[i]}_{i+1}.png')
+    img = responce.content
+    with open(f'img{i}.png', 'wb') as file:
+        file.write(img)
+
+
+================================================================================
+
+5- savol
+
+import smtplib
+from email.message import EmailMessage
+import time
+
+email_address = "suratovdoniyor@gmail.com"
+email_password = "beoxsxpsmdaxtgnr"
+
+msg = EmailMessage()
+msg['Subject'] = "Txt file Suratov Doniyor"
+msg['From'] = email_address
+msg['To'] = "Adilshod3234@gmail.com"
+msg.set_content("Txt file Suratov Doniyor")
+
+
+with open("/home/doniyor/Документы/3-modul_imtixon/javoblar.txt", "rb") as file:
+    msg.add_attachment(file.read(), maintype="text", subtype="plain", filename="file.txt")
+
+
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    smtp.login(email_address, email_password)
+    smtp.send_message(msg)

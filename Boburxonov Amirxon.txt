@@ -1,0 +1,102 @@
+Boburxonov Amirxon:
+1:Question
+
+https://leetcode.com/problems/find-target-indices-after-sorting-array/
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        return [i for i, j in enumerate(sorted(nums)) if j==target]
+
+
+
+2:Question
+
+https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        count2=0
+        for i in nums:
+            count=0
+            while i>0:
+                count+=1
+                i=i//10
+            if count%2==0:
+                count2+=1
+        return count2
+
+
+
+3:Question
+
+import os
+import requests
+from multiprocessing.pool import ThreadPool as Pool
+
+def download_image(url):
+        response = requests.get(url)
+    if response.status_code == 200:
+            image_name = url.split('/')[-1]
+            with open(f'image/{image_name}', 'wb') as f:
+                f.write(response.content)
+            print(f'Downloaded {image_name}')
+    else:
+            print(f'Failed to download {url}')
+
+if __name__ == '__main__':
+    os.makedirs('Save_image', exist_ok=True)
+    urls =[
+            'https://www.freepnglogos.com/uploads/cat-png/cat-boarding-24.png',
+            'https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREEdoPF_J8Q3O2hqVjIxqSiVh29B51RN9NliqgOVw&s.png',
+            'https://www.transparentpng.com/thumb/cat/DTQ8pR-cat-png.png',
+            'https://e7.pngegg.com/pngimages/273/154/png-clipart-cats-cats.png',
+            'https://w7.pngwing.com/pngs/409/967/png-transparent-cat-kitten-veterinarian-cat.png',
+            'https://w7.pngwing.com/pngs/584/499/png-transparent-silver-tabby-cat-kitten-whiskers-cat-food-cat-person-kitten-mammal-animals-cat-like-mammal.png',
+            'https://www.pngall.com/wp-content/uploads/2016/03/Cat-PNG-4.png'
+              ]
+    pool = Pool(processes=4)
+    pool.map(download_image, urls)
+    pool.close()
+    pool.join()
+
+
+
+5:Question
+
+
+import smtplib
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+def send_email(sender_email, sender_password, receiver_email, subject, message, attachment_path=None):
+    smtp_host = 'smtp.gmail.com'
+    smtp_port = 587
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = "Adilshod3234@gmail.com"
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+    if attachment_path:
+        with open(attachment_path, 'rb') as attachment:
+            part = MIMEBase('application', 'octet-stream')
+            part.set_payload(attachment.read())
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', f'attachment; filename= {attachment_path}')
+        msg.attach(part)
+
+    with smtplib.SMTP(smtp_host, smtp_port) as server:
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.send_message(msg)
+sender_email = 'aboburxonov7270@gmail,com'
+sender_password = 'zwcwhyivdwyqjnwr'
+receiver_email = 'Adilshod3234@gmail.com'
+subject = 'Exam'
+message = 'Exam Successed'
+
+attachment_path = 'Boburxonov Amirxon.txt'
+
+
+send_email(sender_email, sender_password, receiver_email, subject, message, attachment_path)
+

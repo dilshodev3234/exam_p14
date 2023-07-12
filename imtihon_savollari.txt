@@ -1,0 +1,401 @@
+Amirxon Boburxonov
+    1) https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true
+    2) https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+A'zamov Shohbozbek
+    1)https://leetcode.com/problems/percentage-of-users-attended-a-contest/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/find-common-characters/
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Dilfuza Kodirova
+    1)https://leetcode.com/problems/user-activity-for-the-past-30-days-i/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/missing-number/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Dilnavoz Nabiyeva
+    1) https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=true
+    2) https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Dilshodbek Ahmadov
+
+    1) https://leetcode.com/problems/employees-whose-manager-left-the-company/?envType=study-plan-v2&id=top-sql-50
+    2) https://leetcode.com/problems/valid-boomerang/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Diyorbek Dilmurodov
+    1)https://www.hackerrank.com/challenges/weather-observation-station-20/problem?isFullScreen=true
+    2)https://leetcode.com/problems/duplicate-zeros/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Sur'atov
+
+    1)https://leetcode.com/problems/delete-duplicate-emails/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/can-place-flowers/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+To'xtasinov
+    1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Ezozbek Nurillayev
+
+    1)https://leetcode.com/problems/largest-odd-number-in-string/
+    2)https://leetcode.com/problems/find-users-with-valid-e-mails/?envType=study-plan-v2&id=top-sql-50
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5)  email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Foziljon Imonqulov
+
+    1)https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/
+    2)https://leetcode.com/problems/list-the-products-ordered-in-a-period/?envType=study-plan-v2&id=top-sql-50
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Gʻofforov Husniddin
+
+    1)https://leetcode.com/problems/decode-string/
+    2)https://leetcode.com/problems/employee-bonus/?envType=study-plan-v2&id=top-sql-50
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Humoyun Alimov
+    1)https://leetcode.com/problems/average-selling-price/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/longest-common-prefix/
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Isomiddin Muminov
+
+    1)https://leetcode.com/problems/most-common-word/
+    2)https://telegra.ph/file/a3e36905a67f8586aa192.png         -> sqlite da sxemani tuzamiz
+    3) 10 rasmni internetdan topib "image" degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Turg'unov
+    1)https://leetcode.com/problems/excel-sheet-column-title/
+    2)https://leetcode.com/problems/primary-department-for-each-employee/?envType=study-plan-v2&id=top-sql-50
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Mohir Mirahmadov
+
+    1)https://leetcode.com/problems/rotate-string/
+    2)https://leetcode.com/problems/biggest-single-number/?envType=study-plan-v2&id=top-sql-50
+    3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+
+Saidakbar Uraimov
+    1)https://leetcode.com/problems/biggest-single-number/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/most-common-word/
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+Samidillo Ravshanov
+    1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
+    2)https://telegra.ph/file/a3e36905a67f8586aa192.png         -> sqlite da sxemani tuzamiz
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Sarvar Beknazarov
+    1)https://leetcode.com/problems/user-activity-for-the-past-30-days-i/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/missing-number/
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Shaxrizoda Xakimova
+    1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Xayrullo Madaminov
+    1)https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=true
+    2)https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+Yodgorbek Satimov
+    1)https://leetcode.com/problems/decode-string/
+    2)https://leetcode.com/problems/employee-bonus/?envType=study-plan-v2&id=top-sql-50
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+
+
+
+Zoyirjon Ergashev
+    1) https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true
+    2) https://telegra.ph/file/af2d2e07320f0f9a8b352.png          -> sqlite da sxemani tuzamiz
+    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    4)
+    p14:
+        test1.py
+        test2.py
+        t3.py
+        tes1.py
+        test.py
+        ...
+
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+
+
+    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz

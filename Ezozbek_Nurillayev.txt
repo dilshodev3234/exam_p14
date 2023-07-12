@@ -1,0 +1,69 @@
+1-Masala
+
+
+2-Masala
+
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        index = []
+        for i, num in enumerate(nums):
+            if num == target:
+                index.append(i)
+        return index
+
+3-Masala
+
+import requests
+import os
+from multiprocessing.pool import ThreadPool as Pool
+
+
+url = "https://example.com/images/"
+
+directory = "images"
+
+
+def download_image(image_url):
+    filename = image_url.split("/")[-1]
+
+    filepath = os.path.join(directory, filename)
+
+    response = requests.get(image_url)
+
+    with open(filepath, "wb") as f:
+        f.write(response.content)
+
+
+image_urls = [f"{url}image_{i}.jpg" for i in range(1, 11)]
+
+pool = Pool(processes=10)
+
+pool.map(download_image, image_urls)
+
+pool.close()
+pool.join()
+
+
+4-Masala
+
+import os
+
+folder_name = "p14"
+file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+
+# Create file
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+# Write comment
+for file_name in file_names:
+    with open(os.path.join(folder_name, file_name), "w") as f:
+        f.write("Hello P14")
+
+# Print file name
+for file_name in file_names:
+    print(f"Wrote {file_name} to {folder_name}.")
+
+
+5-Masala

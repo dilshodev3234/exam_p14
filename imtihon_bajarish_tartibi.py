@@ -1,20 +1,23 @@
 """
 ism_familya.txt:
-    1) link
+    1)
     code ....
 
 
-    2) link
+    2)
     code ....
 
 
-    3) code ....
+    3)
+    code ....
 
-    4) code ....
+    4)
+    code ....
 
-    5) query code ....
+    5)
+    code ....
 
 
 
-git hub account ga yozgan imtihon javoblarizni push qilasiz!
+git hub ga yozgan imtihon javoblarizni push qilasiz!
 """

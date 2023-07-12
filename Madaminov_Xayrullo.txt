@@ -1,0 +1,116 @@
+ism_familya.txt:
+    1)
+
+
+
+    2)
+https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/
+
+       amount.sort()
+        a = amount[-1]
+        b = amount[0] + amount[1]
+        if b>a:
+            if (b-a)%2==0:
+                return a + (b-a)//2
+            else:
+                return a + 1 + (b-a)//2
+        return a
+
+    3)
+    import os
+    import requests
+    from multiprocessing.pool import ThreadPool as Pool
+
+    def download_image(url):
+        response = requests.get(url)
+        if response.status_code == 200:
+            image_name = url.split('/')[-1]
+            with open(f'image/{image_name}', 'wb') as f:
+                f.write(response.content)
+            print(f'Downloaded {image_name}')
+        else:
+            print(f'Failed to download {url}')
+
+    if __name__ == '__main__':
+        os.makedirs('Save_image', exist_ok=True)
+        urls =[
+            'https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_640.jpg',
+            'https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_640.jpg',
+            'https://c4.wallpaperflare.com/wallpaper/454/787/651/hd-photo-nature-photos-1920x1080-wallpaper-preview.jpg',
+            'https://c4.wallpaperflare.com/wallpaper/440/12/60/nature-hd-for-pc-download-1920x1080-wallpaper-thumb.jpg',
+            'https://c4.wallpaperflare.com/wallpaper/294/80/851/hd-photo-nature-photos-1920x1080-wallpaper-preview.jpg',
+            "https://c4.wallpaperflare.com/wallpaper/955/31/673/photos-nature-hd-1920x1080-wallpaper-preview.jpg",
+            'https://c4.wallpaperflare.com/wallpaper/509/579/825/hd-photo-nature-photos-1920x1080-wallpaper-preview.jpg',
+            'https://c4.wallpaperflare.com/wallpaper/18/962/331/water-abstract-fire-ying-yang-photo-manipulation-black-background-1920x1080-nature-water-hd-art-wallpaper-preview.jpg'
+            'https://c4.wallpaperflare.com/wallpaper/248/826/336/nature-1920x1080-space-wallpaper-preview.jpg',
+            'https://i.pinimg.com/originals/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg'
+              ]
+        pool = Pool(processes=4)
+        pool.map(download_image, urls)
+        pool.close()
+        pool.join()
+
+
+
+
+
+    4)
+    import os
+
+    folder_name = "p14"
+    file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+
+    for file_name in file_names:
+        with open(os.path.join(folder_name, file_name), "w") as f:
+            f.write(" Hello " + file_name)
+
+
+    5)
+
+import smtplib
+from email import encoders
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+def send_email(sender_email, sender_password, receiver_email, subject, message, attachment_path=None):
+    smtp_host = 'smtp.gmail.com'
+    smtp_port = 587
+
+    # Xabar obyekti yaratish
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = "Adilshod3234@gmail.com"
+    msg['Subject'] = subject
+
+    # Xabarga matn qo'shish
+    msg.attach(MIMEText(message, 'plain'))
+
+    if attachment_path:
+        with open(attachment_path, 'rb') as attachment:
+            part = MIMEBase('application', 'octet-stream')
+            part.set_payload(attachment.read())
+        encoders.encode_base64(part)
+        part.add_header('Content-Disposition', f'attachment; filename= {attachment_path}')
+        msg.attach(part)
+
+    with smtplib.SMTP(smtp_host, smtp_port) as server:
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.send_message(msg)
+
+sender_email = 'khayrullo.devs@gmail.com'
+sender_password = 'xmzlcxjuddaekojw'
+receiver_email = 'Adilshod3234@gmail.com'
+subject = 'IMTIXON'
+message = 'IMTIXON BAJARILDI'
+
+attachment_path = 'Madaminov_Xayrullo.txt'
+
+
+send_email(sender_email, sender_password, receiver_email, subject, message, attachment_path)
+
+

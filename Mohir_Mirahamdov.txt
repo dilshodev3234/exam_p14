@@ -1,0 +1,64 @@
+# Mohir Mirahmadov
+
+1)https://leetcode.com/problems/rotate-string/
+
+class Solution:
+    def rotateString(self, s: str, goal: str) -> bool:
+        if len(s) != len(goal):
+            return False
+        s2 = s + s
+        return goal in s2
+
+
+
+
+2)https://leetcode.com/problems/find-target-indices-after-sorting-array/
+
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        sorted_nums = sorted(nums)
+        target_indices = [i for i, num in enumerate(sorted_nums) if num == target]
+        return target_indices
+
+3)
+
+4)
+
+5)
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+
+sender_email = "mohirmirahmadov@gmail.com"
+recipient_email = "Adilshod3234@gmail.com"
+subject = "Code File Attachment"
+body = "Please find attached the code file."
+code_file_path = "Mohir_Mirahamdov.txt"
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = recipient_email
+message["Subject"] = subject
+message.attach(MIMEText(body, "plain"))
+with open('Mohir_Mirahamdov.txt', "rb") as file:
+    attachment = MIMEBase("application", "octet-stream")
+    attachment.set_payload(file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {code_file_path.split('/')[-1]}",
+    )
+    message.attach(attachment)
+
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "mohirmirahmadov@gmail.com"
+smtp_password = "jngeyiitjczjxity"
+
+with smtplib.SMTP(smtp_host, smtp_port) as server:
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.send_message(message)
+    print("Email sent successfully!")

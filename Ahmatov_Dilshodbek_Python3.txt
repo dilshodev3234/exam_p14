@@ -1,0 +1,94 @@
+        Ahmatov Dilshodbek
+
+        1 - misol
+
+https://leetcode.com/problems/find-target-indices-after-sorting-array/description/
+
+    class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        arr=[]
+        nums.sort()
+        for i in range(len(nums)):
+            if nums[i]==target:
+                arr.append(i)
+        return arr
+
+
+
+        2 - misol
+
+
+
+
+
+
+
+
+        3 - misol
+
+
+
+
+
+
+        4 - misol
+
+
+import os
+
+name = "p14"
+file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+
+
+if not os.path.exists(name):
+    os.makedirs(name)
+
+
+for i in file_names:
+    with open(os.path.join(name, i), "w") as f:
+        f.write(f'print("Hello{i}")')
+
+
+for i in file_names:
+    print(f"Wrote {i} to {name}.")
+
+
+        5 - misol
+
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+
+sender_email = "ahmatovdilshodbek@gmail.com"
+recipient_email = "Adilshod3234@gmail.com"
+subject = "Code File Attachment"
+body = "Please find attached the code file."
+code_file_path = "Ahmatov_Dilshodbek_Python3.txt"
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = recipient_email
+message["Subject"] = subject
+message.attach(MIMEText(body, "plain"))
+with open('Ahmatov_Dilshodbek_Python3.txt.txt', "rb") as file:
+    attachment = MIMEBase("application", "octet-stream")
+    attachment.set_payload(file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {code_file_path.split('/')[-1]}",
+    )
+    message.attach(attachment)
+
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "ahmatovdilshodbek@gmail.com"
+smtp_password = "????"
+
+with smtplib.SMTP(smtp_host, smtp_port) as server:
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.send_message(message)
+    print("Email sent successfully!")

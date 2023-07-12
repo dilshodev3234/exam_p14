@@ -1,0 +1,109 @@
+#1 chi savol
+
+class Solution:
+    def decodeString(self, s: str) -> str:
+        arr = []
+        current_num = 0
+        current_str = ''
+
+        for i in s:
+            if i.isdigit():
+                current_num = current_num * 10 + int(i)
+            elif i == '[':
+                arr.append((current_str, current_num))
+                current_str = ''
+                current_num = 0
+            elif i == ']':
+                prev_str, num = arr.pop()
+                current_str = prev_str + current_str * num
+            else:
+                current_str += i
+
+        return current_str
+
+
+
+#   2 chi savol
+
+class Solution:
+    def targetIndices(self, nums, target):
+        arr = []
+
+        sorted_nums = sorted(nums)
+
+        for i, num in enumerate(sorted_nums):
+            if num > target:
+                break
+            if num == target:
+                arr.append(i)
+
+        return arr
+
+# 3 chi savol
+
+import httpx
+mas=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYB_UFHc9SJGzJ8HnVT0XceyHNoLR8wa_vA&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5jCOThX87vIQlH3H0zrdnfULQMW69sYaKbw&usqp=CAU",
+     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1gcndpBvbrx-WLXTyzb8vXTZmLtHMzvyxw&usqp=CAU"
+     ]
+
+for i in range(len(mas)):
+    responce = httpx.get(f'{mas[i]}_{i+1}.png')
+    img = responce.content
+    with open(f'img{i}.png', 'wb') as file:
+        file.write(img)
+
+# 4 chi savol
+
+
+import os
+
+
+num_files = 5
+
+
+fayl = '4_savol'
+os.makedirs(fayl, exist_ok=True)
+
+for i in range(num_files):
+    file_name = f'test{i + 1}.py'
+    file_path = os.path.join(fayl, file_name)
+
+
+    with open(file_path, 'w') as file:
+        file.write('print("Hello, world!")')
+
+    print(i+1, f'test yaratildi {file_path}')
+
+print('Hamma fayllar muvaffaqiyatli yaratildi')
+
+
+# 5 chi savol
+
+import smtplib
+from email.message import EmailMessage
+import time
+
+email_address = "yodgorbek1455858@gmail.com"
+email_password = "tfoivjzennrrsuub"
+
+msg = EmailMessage()
+msg['Subject'] = "Email subject"
+msg['From'] = email_address
+msg['To'] = "Adilshod3234@gmail.com"
+msg.set_content("3'rd modul exam answers")
+
+
+with open("/home/kali/PycharmProjects/3modul_exam/Yodgorbek_Satimov.txt", "rb") as file:
+    msg.add_attachment(file.read(), maintype="text", subtype="plain", filename="file.txt")
+
+
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    smtp.login(email_address, email_password)
+    smtp.send_message(msg)

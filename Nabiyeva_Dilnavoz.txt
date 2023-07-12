@@ -1,0 +1,138 @@
+#Dilnavoz Nabiyeva
+#1-savol
+class Solution(object):
+    def canPlaceFlowers(self, flowerbed, n):
+        """
+        :type flowerbed: List[int]
+        :type n: int
+        :rtype: bool
+        """
+
+        flowerbed.append(0)
+        flowerbed.insert(0, 0)
+
+        i = 0
+        zero = 0
+        while i != len(flowerbed):
+            if flowerbed[i] == 1:
+                zero = 0
+            else:
+                zero += 1
+                if zero == 3:
+                    n -= 1
+                    zero = 1
+            i += 1
+        return n <= 0
+
+2 - savol
+
+
+class Solution(object):
+    def fillCups(self, amount):
+        """
+        :type amount: List[int]
+        :rtype: int
+        """
+        secund = 0
+        while sum(amount):
+            s_amount = sorted(amount, reverse=True)
+            first = s_amount[0]
+            second = s_amount[1]
+            if second == 0:
+                amount[amount.index(first)] -= 1
+                secund += 1
+                continue
+            else:
+                amount[amount.index(first)] -= 1
+                amount[amount.index(second)] -= 1
+                secund += 1
+        return secund
+
+3-savol
+import os
+import requests
+from multiprocessing.pool import ThreadPool as Pool
+
+
+def download_image(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        image_name = url.split('/')[-1]
+        with open(f'Save_image/{image_name}', 'wb') as f:
+            f.write(response.content)
+        print(f'Downloaded {image_name}')
+    else:
+        print(f'Failed to download {url}')
+
+
+if __name__ == '__main__':
+    os.makedirs('Save_image', exist_ok=True)
+    urls = [
+        'https://i.pinimg.com/originals/a9/ac/a2/a9aca2f4501163a0820d59e0236d2bc8.png',
+        'https://i.ytimg.com/vi/qNrBLARlvQU/maxresdefault.jpg',
+        'https://s3.ap-south-1.amazonaws.com/townscript-production/images/0463cba0-617f-4ff6-809e-603437fb116b.jpg',
+        'https://c3.klipartz.com/pngpicture/275/411/sticker-png-alternative-python-icons-and-folder-icon-python-5-titled-thumbnail.png',
+        'https://w7.pngwing.com/pngs/1005/16/png-transparent-python-tutorial-general-purpose-programming-language-arcgis-high-speed-rail-logo-angle-text-logo.png',
+        'https://e7.pngegg.com/pngimages/266/560/png-clipart-python-computer-icons-programmer-javascript-programming-language-python-logo-angle-text.png',
+        'https://img.favpng.com/9/13/18/python-tutorial-programming-language-computer-programming-png-favpng-VWpd388x4DeDATqjudTpT4NAk.jpg',
+        'https://e7.pngegg.com/pngimages/212/879/png-clipart-python-number-function-hello-world-program-computer-programming-py-computer-programming-number.png',
+        'https://thecanadiancollege.ca/wp-content/uploads/2018/05/Phyton-language.jpg',
+        'https://c0.klipartz.com/pngpicture/213/305/gratis-png-python-mysql-yellow-dog-updater-base-de-datos-django-modificada-feroz-python-s.png',
+
+    ]
+    pool = Pool()
+    pool.map(download_image, urls)
+    pool.close()
+    pool.join()
+
+4-savol
+import os
+
+papka_nomi = "p14"
+file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+
+if not os.path.exists(papka_nomi):
+    os.makedirs(papka_nomi)
+
+for file_name in file_names:
+    with open(os.path.join(papka_nomi, file_name), "w") as f:
+        f.write("hello " + file_name)
+
+5-savol
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+
+sender_email = "nabiyevadilnavoz736@gmail.com"
+recipient_email = "Adilshod3234@gmail.com"
+subject = "Code File Attachment"
+body = "Please find attached the code file."
+code_file_path = "exam.txt"
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = recipient_email
+message["Subject"] = subject
+message.attach(MIMEText(body, "plain"))
+with open('exam.txt', "rb") as file:
+    attachment = MIMEBase("application", "octet-stream")
+    attachment.set_payload(file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {code_file_path.split('/')[-1]}",
+    )
+    message.attach(attachment)
+
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "nabiyevadilnavoz736@gmail.com"
+smtp_password = "ehrryyciqbrsojxe"
+
+with smtplib.SMTP(smtp_host, smtp_port) as server:
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.send_message(message)
+    print("Email sent successfully!")

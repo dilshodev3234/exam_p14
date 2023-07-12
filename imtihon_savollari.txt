@@ -292,7 +292,7 @@ Saidakbar Uraimov
     5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
 
 Samidillo Ravshanov
-    1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
+    1)https://leetcode.com/problems/find-target-indices-after-sorting-array/
     2)https://telegra.ph/file/a3e36905a67f8586aa192.png         -> sqlite da sxemani tuzamiz
     3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)

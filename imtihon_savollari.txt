@@ -127,7 +127,7 @@ Sur'atov
 
 
 To'xtasinov
-    1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
+    1)https://leetcode.com/problems/find-target-indices-after-sorting-array/
     2)https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
     3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)
@@ -259,7 +259,7 @@ Turg'unov
 Mohir Mirahmadov
 
     1)https://leetcode.com/problems/rotate-string/
-    2)https://leetcode.com/problems/biggest-single-number/?envType=study-plan-v2&id=top-sql-50
+    2)https://leetcode.com/problems/find-target-indices-after-sorting-array/
     3) 10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)
     p14:
@@ -270,7 +270,8 @@ Mohir Mirahmadov
         test.py
         ...
 
-        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
+        "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !
+          print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
 
     5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
 
@@ -329,7 +330,7 @@ Sarvar Beknazarov
 Shaxrizoda Xakimova
     1)https://leetcode.com/problems/group-sold-products-by-the-date/?envType=study-plan-v2&id=top-sql-50
     2)https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
-    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    3)10 ta rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)
     p14:
 
@@ -347,9 +348,9 @@ Shaxrizoda Xakimova
 
 
 Xayrullo Madaminov
-    1)https://www.hackerrank.com/challenges/challenges/problem?isFullScreen=true
+    1)https://leetcode.com/problems/find-target-indices-after-sorting-array
     2)https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/
-    3)10 rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
+    3) 10 ta rasmni internetdan topib image degan directoryga save qilamiz -> (multiprocessing or multithreading)
     4)
     p14:
         test1.py
@@ -398,4 +399,4 @@ Zoyirjon Ergashev
         "p14" -> papka , || "test1.py" , "test2.py" , "t3.py" , "tes1.py" , "test.py" || file yaratamiz !    print("hello {file_name}") -> shu code ni "p14" degan papkani ichida nechta file bo'lsa shularni hammasiga write qilamiz
 
 
-    5) email : code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboramiz
+    5) emaildan code yozgan txt fileni "Adilshod3234@gmail.com" pochtasiga yuboruvchi code yozilsin

@@ -20,4 +20,3 @@ ism_familya.txt:
 
 
 git hub ga yozgan imtihon javoblarizni push qilasiz!
-"""

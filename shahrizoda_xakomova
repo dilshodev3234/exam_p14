@@ -1,1 +1,130 @@
+"""
+XakimovaShahrizoda.txt:
+    1)https://leetcode.com/problems/find-target-indices-after-sorting-array/
+    code ....class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        target_indices = []
+        sorted_nums = sorted(nums)
+        for i, num in enumerate(sorted_nums):
+            if num == target:
+               target_indices.append(i)
+        return target_indices
+
+
+
+    2)https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
+    code ....class Solution:
+    def average(self, salary: List[int]) -> float:
+        salary.sort()
+        total_sum = sum(salary[1:-1])
+        average = total_sum / (len(salary) - 2)
+        return average
+
+
+    3)
+    code ....
+import requests
+import os
+from concurrent.futures import ThreadPoolExecutor
+
+
+def download_image(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        python = url.split('/')[-1]
+        with open('img.png', 'wb') as file:
+            file.write(response.content)
+            print(f"Downloaded {python}")
+
+
+if __name__ == '__main__':
+    image_urls = [
+        'https://www.google.com/search?sxsrf=AB5stBgTrGCdmkTkEuubt2Xr9OGgLfXgzA:1689140106443&q=python+multithreading+in+for+loop+image&tbm=isch&sa=X&ved=2ahUKEwiIt5SguYiAAxVVVqQEHSLBBjUQ0pQJegQIBxAB&biw=1846&bih=948&dpr=1#imgrc=J5v59ExKFDiHHM',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzn0bqtEUjFi-mscG1RwElwMECviKy6z7Mjg&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzn0bqtEUjFi-mscG1RwElwMECviKy6z7Mjg&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzn0bqtEUjFi-mscG1RwElwMECviKy6z7Mjg&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzn0bqtEUjFi-mscG1RwElwMECviKy6z7Mjg&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXnL_n3D3YIUJbMapvMF_ziA20SLC7gD79aQ&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTuSanAE2rN3em7Vs_03lkWDCVbvLPKd2Vzg&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNs7LS9UWGC8KT9Rs7PsbT3jP_2aUXt8CU2Q&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGYo7L78ns19mzW860G6bwKEQJgJJC3HW4w&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiBuJlQ-Hu7Bbp8sC_6wVsj94wUAQWE6nzQ&usqp=CAU'
+
+    ]
+
+    max_workers = 10
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        executor.map(download_image, image_urls)
+
+    destination_directory = 'img'
+    os.makedirs(destination_directory, exist_ok=True)
+    for filename in os.listdir('.'):
+        if filename.endswith('.jpg'):
+            os.rename(filename, os.path.join(destination_directory, filename))
+
+
+    4)
+    code ....
+    import os
+
+folder_name = "p14"
+file_names = ["test1.py", "test2.py", "t3.py", "tes1.py", "test.py"]
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+for file_name in file_names:
+    with open(os.path.join(folder_name, file_name), "w") as f:
+        f.write(f'print("hello {file_name}")')
+
+for file_name in file_names:
+    print(f"Wrote {file_name} to {folder_name}.")
+
+
+    5)
+    code ....
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+
+sender_email = "xshahrizoda@gmail.com"
+recipient_email = "Adilshod3234@gmail.com"
+subject = "Code File Attachment"
+body = "Please find attached the code file."
+code_file_path = "exam.txt"
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = recipient_email
+message["Subject"] = subject
+message.attach(MIMEText(body, "plain"))
+with open('exam.txt', "rb") as file:
+    attachment = MIMEBase("application", "octet-stream")
+    attachment.set_payload(file.read())
+    encoders.encode_base64(attachment)
+    attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {code_file_path.split('/')[-1]}",
+    )
+    message.attach(attachment)
+
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_username = "xshahrizoda8@gmail.com"
+smtp_password = "lpxvnhsnruiepwha"
+
+with smtplib.SMTP(smtp_host, smtp_port) as server:
+    server.starttls()
+    server.login(smtp_username, smtp_password)
+    server.send_message(message)
+    print("Email sent successfully!")
+
+
+
+
+git hub ga yozgan imtihon javoblarizni push qilasiz!
+"""
+
+
 
